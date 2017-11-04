@@ -42,9 +42,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CookieHelper.cs" />
+    <Compile Include="EmailHelper.cs" />
     <Compile Include="IHttpCookieSerializable.cs" />
+    <Compile Include="Localization\EmailHelper\ErrorMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\EmailHelper\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerializableCookieHelper.cs" />
+    <Compile Include="Sitemaps\Enums.cs" />
+    <Compile Include="Sitemaps\IIndexableImage.cs" />
+    <Compile Include="Sitemaps\IIndexableMedia.cs" />
+    <Compile Include="Sitemaps\IIndexableVideo.cs" />
+    <Compile Include="Sitemaps\ISitemap.cs" />
+    <Compile Include="Sitemaps\ISitemapEntry.cs" />
+    <Compile Include="Sitemaps\ISitemapIndex.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JM0ney.Framework\JM0ney.Framework.csproj">
+      <Project>{b367f991-3b9e-402f-a7f5-eb80679e4953}</Project>
+      <Name>JM0ney.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\EmailHelper\ErrorMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>JM0ney.Framework.Web.Localization.EmailHelper</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\EmailHelper\Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>JM0ney.Framework.Web.Localization.EmailHelper</CustomToolNamespace>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
