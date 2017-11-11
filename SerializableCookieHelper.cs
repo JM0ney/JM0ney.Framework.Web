@@ -33,7 +33,7 @@ namespace JM0ney.Framework.Web {
         /// </summary>
         /// <typeparam name="TIHttpCookie"></typeparam>
         /// <returns></returns>
-        public TIHttpCookie LoadCookie<TIHttpCookie>( )
+        public TIHttpCookie LoadFromCookie<TIHttpCookie>( )
             where TIHttpCookie : class, IHttpCookieSerializable, new() {
             TIHttpCookie theObj = new TIHttpCookie( );
             HttpCookie theCookie = CookieHelper.GetCookie( theObj.CookieName );
@@ -49,7 +49,7 @@ namespace JM0ney.Framework.Web {
         /// </summary>
         /// <typeparam name="TIHttpCookie"></typeparam>
         /// <param name="cookieSerializableObject"></param>
-        public void SaveCookie<TIHttpCookie>( TIHttpCookie cookieSerializableObject )
+        public void SaveToCookie<TIHttpCookie>( TIHttpCookie cookieSerializableObject )
             where TIHttpCookie : class, IHttpCookieSerializable, new() {
             HttpCookie theCookie = cookieSerializableObject.ToCookie( );
             CookieHelper.SetCookie( theCookie );
