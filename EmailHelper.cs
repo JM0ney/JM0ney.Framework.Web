@@ -11,6 +11,9 @@ using System.Net.Mail;
 
 namespace JM0ney.Framework.Web {
 
+    /// <summary>
+    /// Assists with sending emails from within a web application.
+    /// </summary>
     public static class EmailHelper {
 
         public const String EmailSmtpServerSettingName = "JM0ney:EmailSmtpServer";
